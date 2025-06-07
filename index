@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tatiana Yasmine Adriano Boccone | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      margin-top: 1.5rem;
+      color: #222;
+    }
+    .intro {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin-bottom: 3rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .media-item {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      background: #fafafa;
+      border-radius: 5px;
+    }
+    .caption {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="intro">
+    <p>Hi, I’m Tatiana Yasmine Adriano Boccone (aka Tati / Yasmi) — a Filipino-American creative with over 7 years of experience translating ideas into design through video editing, campaign execution, and content design. I’m passionate about motion design and love crafting compelling brand narratives using tools like Adobe Creative Suite, Figma &lt;3, and Final Cut Pro.</p>
+  </section>
+
+  <section class="gallery">
+    <div class="media-item">
+      <div class="caption">Made from collected maps and tickets, the MET map &amp; ticket book serves as a visual archive of repeated visits, capturing a quiet history of art, memory, and place.</div>
+    </div>
+    <div class="media-item">
+      <a href="https://shoptresi.com/" target="_blank" rel="noopener noreferrer">
+        As Marketing Manager at TRESI, I filmed, edited, and produced the entry video featured on the company’s website.
+      </a>
+    </div>
+    <div class="media-item">
+      <a href="https://www.carolinasarria.com/" target="_blank" rel="noopener noreferrer">
+        Freelance design work for designer Carolina Sarria.
+      </a>
+    </div>
+    <div class="media-item">
+      <div class="caption">This project was an experiment—a visually bold documentary that breaks away from the usual dull stereotypes. It uses vibrant colors and large text to bring energy and clarity to sharing important information.</div>
+    </div>
+    <div class="media-item">
+      <div class="caption">Explorations in print and form for “MY SELF PORTRAIT”</div>
+    </div>
+    <div class="media-item">
+      <div class="caption">A TRESI Experimental video using mixed media. One of the first videos I produced for them.</div>
+    </div>
+    <div class="media-item">
+      <div class="caption">Coming from a third-world upbringing, transitioning to life in New York City has exposed the jarring contrast between its global prestige and the staggering daily waste that festers beneath it—feeding an unseen empire of rats beneath the so-called “greatest city in the world.”</div>
+    </div>
+    <div class="media-item">
+      <a href="https://www.instagram.com/p/C6ZWL9fPnEp/?hl=en" target="_blank" rel="noopener noreferrer">
+        THE PEARL OF THE ORIENT: This mini-documentary explores the Philippines’ fall from the “Pearl of the Orient” to one of the world’s worst waste offenders, uncovering how history, war, and exploitation shaped its environmental crisis through art and archival footage.
+      </a>
+    </div>
+    <div class="media-item">
+      <div class="caption">From flipbook to motion, this exploration is an extension of my college thesis: a self portrait.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Artworks</h2>
+    <p>Before design, I did art — traditional oil painting, gouache, acrylic, charcoal drawing, and mixed media (collage art).</p>
+    <div class="gallery">
+      <div class="media-item"><div class="caption">Untitled</div></div>
+      <div class="media-item"><div class="caption">“Time”</div></div>
+      <div class="media-item"><div class="caption">Untitled</div></div>
+      <div class="media-item"><div class="caption">Untitled</div></div>
+      <div class="media-item"><div class="caption">Untitled</div></div>
+      <div class="media-item"><div class="caption">Untitled</div></div>
+    </div>
+  </section>
+
+</body>
+</html>
