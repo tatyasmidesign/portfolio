@@ -2,104 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tatiana Yasmine Adriano Boccone | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tati yasmi design</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background: #fff;
-      color: #111;
-      line-height: 1.6;
+    :root {
+      --max-width: 100%;
     }
-    h1, h2 {
-      margin-top: 1.5rem;
-      color: #222;
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #111;
+    }
+    header {
+      background-color: #fff;
+      width: 100%;
     }
     .intro {
-      font-size: 1.4rem;
-      max-width: 700px;
-      margin-bottom: 3rem;
+      font-size: calc(1rem * var(--font-scale, 1.71));
+      margin-bottom: 2rem;
+      padding: 2rem 1rem;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
     }
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
+      column-count: 3;
+      column-gap: 2rem;
+      padding: 0 1rem;
+      max-width: var(--max-width);
+      margin: 0 auto 3rem;
     }
     .media-item {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      background: #fafafa;
-      border-radius: 5px;
+      break-inside: avoid;
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+      position: relative;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+    .media-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
     }
     .caption {
-      margin-top: 0.8rem;
-      font-size: 0.9rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
       color: #555;
+      font-size: 1.4rem;
+      padding: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      height: 100%;
+      overflow-y: auto;
     }
-    a {
-      color: #0077cc;
+    .media-item:hover .caption {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      .gallery {
+        column-count: 2;
+        padding: 0 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .gallery {
+        column-count: 1;
+        padding: 0 1rem;
+      }
+      .intro {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .footer-links a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
       text-decoration: none;
+      color: #111;
+      border: 1px solid #111;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
     }
-    a:hover {
-      text-decoration: underline;
+    .footer-links a:hover {
+      background-color: #111;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-
-  <section class="intro">
-    <p>Hi, I’m Tatiana Yasmine Adriano Boccone (aka Tati / Yasmi) — a Filipino-American creative with over 7 years of experience translating ideas into design through video editing, campaign execution, and content design. I’m passionate about motion design and love crafting compelling brand narratives using tools like Adobe Creative Suite, Figma &lt;3, and Final Cut Pro.</p>
-  </section>
+  <header>
+    <div class="intro">
+      <p>Hi, I’m Tatiana Yasmine Adriano Boccone (aka Tati / Yasmi) — a Filipino-American creative with over 7 years of experience translating ideas into design through video editing, campaign execution, and content design. I’m passionate about motion design and love crafting compelling brand narratives using tools like Adobe Creative Suite, Figma <3, and Final Cut Pro.</p>
+    </div>
+  </header>
 
   <section class="gallery">
     <div class="media-item">
-      <div class="caption">Made from collected maps and tickets, the MET map &amp; ticket book serves as a visual archive of repeated visits, capturing a quiet history of art, memory, and place.</div>
-    </div>
+      <a href="https://www.carolinasarria.com/" target="_blank">
+        <img src="Images/CSBOOK.gif" alt="Project image 3">
+        <div class="caption">Freelance book design work for designer Carolina Sarria for her CFDA entry.</div>
+      </a>
+      </div>
     <div class="media-item">
-      <a href="https://shoptresi.com/" target="_blank" rel="noopener noreferrer">
-        As Marketing Manager at TRESI, I filmed, edited, and produced the entry video featured on the company’s website.
+      <a href="https://shoptresi.com/" target="_blank">
+        <img src="Images/TRESI LANDING PAGE.gif" alt="Project image 2">
+        <div class="caption">As Marketing Manager at TRESI, I filmed, edited, and produced the entry video featured on the company’s website.</div>
       </a>
     </div>
     <div class="media-item">
-      <a href="https://www.carolinasarria.com/" target="_blank" rel="noopener noreferrer">
-        Freelance design work for designer Carolina Sarria.
-      </a>
+      <img src="Images/met1v.gif" alt="Project image 1">
+      <div class="caption">Made from collected maps and tickets, the MET map & ticket book serves as a visual archive of repeated visits, capturing a quiet history of art, memory, and place.</div>
     </div>
     <div class="media-item">
+      <img src="Images/DOC+JOURNALISM.gif" alt="Project image 4">
       <div class="caption">This project was an experiment—a visually bold documentary that breaks away from the usual dull stereotypes. It uses vibrant colors and large text to bring energy and clarity to sharing important information.</div>
     </div>
     <div class="media-item">
-      <div class="caption">Explorations in print and form for “MY SELF PORTRAIT”</div>
-    </div>
-    <div class="media-item">
+      <img src="Images/TRESIPHOTOMOTION.gif" alt="Project image 6">
       <div class="caption">A TRESI Experimental video using mixed media. One of the first videos I produced for them.</div>
     </div>
     <div class="media-item">
-      <div class="caption">Coming from a third-world upbringing, transitioning to life in New York City has exposed the jarring contrast between its global prestige and the staggering daily waste that festers beneath it—feeding an unseen empire of rats beneath the so-called “greatest city in the world.”</div>
+      <img src="Images/STOPMOTION.gif" alt="Project image 9">
+      <div class="caption">From flipbook to motion, this exploration is an extension of my college thesis: a self portrait.</div>
     </div>
     <div class="media-item">
-      <a href="https://www.instagram.com/p/C6ZWL9fPnEp/?hl=en" target="_blank" rel="noopener noreferrer">
-        THE PEARL OF THE ORIENT: This mini-documentary explores the Philippines’ fall from the “Pearl of the Orient” to one of the world’s worst waste offenders, uncovering how history, war, and exploitation shaped its environmental crisis through art and archival footage.
+      <a href="https://www.instagram.com/p/C6ZWL9fPnEp/?hl=en" target="_blank">
+        <img src="Images/PERLASNGSILANGAN.gif" alt="Project image 8">
+        <div class="caption">THE PEARL OF THE ORIENT: This mini-documentary explores the Philippines’ fall from the “Pearl of the Orient” to one of the world’s worst waste offenders, uncovering how history, war, and exploitation shaped its environmental crisis through art and archival footage.</div>
       </a>
     </div>
     <div class="media-item">
-      <div class="caption">From flipbook to motion, this exploration is an extension of my college thesis: a self portrait.</div>
+      <img src="Images/5SECRULEWEB.gif" alt="Project image 7">
+      <div class="caption">Coming from a third-world upbringing, transitioning to life in New York City has exposed the jarring contrast between its global prestige and the staggering daily waste that festers beneath it—feeding an unseen empire of rats beneath the so-called “greatest city in the world.”</div>
     </div>
   </section>
 
-  <section>
-    <h2>Artworks</h2>
-    <p>Before design, I did art — traditional oil painting, gouache, acrylic, charcoal drawing, and mixed media (collage art).</p>
-    <div class="gallery">
-      <div class="media-item"><div class="caption">Untitled</div></div>
-      <div class="media-item"><div class="caption">“Time”</div></div>
-      <div class="media-item"><div class="caption">Untitled</div></div>
-      <div class="media-item"><div class="caption">Untitled</div></div>
-      <div class="media-item"><div class="caption">Untitled</div></div>
-      <div class="media-item"><div class="caption">Untitled</div></div>
+  <footer>
+    <p>Based in NYC</p>
+    <div class="footer-links">
+      <a href="tel:+16466677330">Call Me</a>
+      <a href="mailto:tyboccone@gmail.com">Email Me</a>
+      <a href="https://www.instagram.com/xaxixasmi" target="_blank">Instagram</a>
     </div>
-  </section>
-
+  </footer>
 </body>
 </html>
