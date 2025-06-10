@@ -40,7 +40,7 @@
     .media-item {
       break-inside: avoid;
       margin-bottom: 2rem;
-      padding: 0.5rem;
+      padding: 2rem;
       position: relative;
       overflow: hidden;
       background-color: #ffffff;
@@ -56,28 +56,34 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.95);
-      color: #555;
+      color: rgb(0, 0, 0);
       font-size: 1.4rem;
-      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.70);
+      padding: 10rem;
       opacity: 0;
       transition: opacity 0.3s ease;
       height: 100%;
       overflow-y: auto;
+      filter: grayscale(100%);
     }
     .media-item:hover .caption {
       opacity: 1;
     }
+.media-item img:hover{
+  webkit-filter: blur(4px); 
+  filter: blur(4px);
+  filter: grayscale(100%);
+    }
     @media (max-width: 768px) {
       .gallery {
         column-count: 2;
-        padding: 0 1rem;
+        padding: 0 5rem;
       }
     }
     @media (max-width: 480px) {
       .gallery {
-        column-count: 1;
-        padding: 0 1rem;
+        column-count: 2;
+        padding: 0 5rem;
       }
       .intro {
         font-size: 1rem;
@@ -85,7 +91,7 @@
       }
     }
     footer {
-      background-color: #f2f2f2;
+      background-color: #ffffff;
       padding: 2rem;
       text-align: center;
       font-size: 1rem;
@@ -109,7 +115,7 @@
 <body>
   <header>
     <div class="intro">
-      <p>Hi, I’m Tatiana Yasmine Adriano Boccone <span style: "font-family: baskerville;">(aka Tati / Yasmi)</span> — a Filipino-American creative with over 7 years of experience translating ideas into design through video editing, campaign execution, and content design. I’m passionate about motion design and love crafting compelling brand narratives using tools like Adobe Creative Suite, Figma <3, and Final Cut Pro.</p>
+      <p>Hi, I’m Tatiana Yasmine Adriano Boccone <span style: "font-family: baskerville;">(aka Tati / Yasmi)</span> — a Filipino-American creative with over 7 years of experience translating ideas into design through video editing, book layout design, campaign execution, and content design. I’m passionate about motion design and love crafting compelling brand narratives using tools like Adobe Creative Suite, Figma <3, and Final Cut Pro.</p>
     </div>
   </header>
 
@@ -127,24 +133,29 @@
         </a>
       </div>
       <div class="media-item">
-        <img src="Images/TICKETSMOSAIC.png" alt="Project image 1">
+        <img style="padding: 2rem;" src="Images/TICKETSMOSAIC.png" alt="Project image 1">
         <div class="caption">Made from collected maps and tickets, the MET map & ticket book serves as a visual archive of repeated visits, capturing a quiet history of art, memory, and place.</div>
       </div>
     <div class="media-item">
       <a href="https://shoptresi.com/" target="_blank">
-        <img src="Images/LOADING APT.gif" alt="Project image 2">
+        <img style= "padding: 5rem;" src="Images/LOADING APT.gif" alt="Project image 2">
         <div class="caption">As Marketing Manager at TRESI, I filmed, edited, and produced the entry video featured on the company’s website.</div>
       </a>
     </div>
     <div class="media-item">
       <a href="https://shoptresi.com/" target="_blank">
-        <img src="Images/TRESI OLD.png" alt="Project image 2">
+        <img style= "padding: 5rem;" src="Images/TRESIPHOTOMOTION.gif" alt="Project image 6">
+        <div class="caption">A TRESI Experimental video using mixed media. One of the first videos I produced for them.</div>
+    </div>
+    <div class="media-item">
+      <a href="https://shoptresi.com/" target="_blank">
+        <img style="padding: 2rem;" src="Images/TRESI OLD.png" alt="Project image 2">
         <div class="caption">As Marketing Manager at TRESI, I filmed, edited, and produced the entry video featured on the company’s website.</div>
       </a>
     </div>
     <div class="media-item">
       <a href="https://shoptresi.com/" target="_blank">
-        <img src="Images/FORMAT.jpg" alt="Project image 2">
+        <img style="padding: 2rem;" src="Images/FORMAT.jpg" alt="Project image 2">
         <div class="caption">Explorations in print and form for “MY SELF PORTRAIT”</div>
       </a>
     </div>
@@ -155,10 +166,6 @@
     <div class="media-item">
       <img src="Images/DOC+JOURNALISM.gif" alt="Project image 4">
       <div class="caption">This project was an experiment—a visually bold documentary that breaks away from the usual dull stereotypes. It uses vibrant colors and large text to bring energy and clarity to sharing important information.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/TRESIPHOTOMOTION.gif" alt="Project image 6">
-      <div class="caption">A TRESI Experimental video using mixed media. One of the first videos I produced for them.</div>
     </div>
     <div class="media-item">
       <img src="Images/STOPMOTION.gif" alt="Project image 9">
@@ -187,5 +194,6 @@
   </footer>
 </body>
 </html>
+
 
 
