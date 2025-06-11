@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: flex-end;
   gap: 1rem;
-  width: 100vw; /* take up full viewport width */
+  width: 100vw; 
   margin: 0;
   padding: 0;
   margin-bottom: 100px;
@@ -36,7 +36,7 @@
 
 .media-item {
   position: relative;
-  width: calc(25% - 1rem); /* 4 items per row, with spacing */
+  width: calc(25% - 1rem); 
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -51,27 +51,23 @@
     }
 
     .caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.9);
-      color: #000;
-      font-size: 0.9rem;
-      padding: 1rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      overflow-y: auto;
-    }
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: rgb(143, 143, 143);
+  font-size: 0.9rem;
+  padding: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
 
-    .media-item:hover .caption {
-      opacity: 1;
-    }
-
-    .media-item:hover img {
-      filter: blur(4px) grayscale(100%);
-    }
+.media-item:hover .caption {
+  max-height: 300px; /* or however tall your longest caption is */
+  opacity: 1;
+  visibility: visible;
+}
 
     footer {
       background-color: white;
@@ -109,6 +105,9 @@
     width: 100%;
   }
 }
+.media-small {
+  width: calc(20% - 1rem);
+}
     }
   </style>
 </head>
@@ -139,7 +138,6 @@
     </div>
   </div>
 
-  <!-- Second Row -->
   <div class="row">
     <div class="media-item">
       <img src="Images/BRAVEHEART.png" alt="Print Exploration">
@@ -164,7 +162,7 @@
       <img src="Images/ezgif-8115cd5d79d1c6.gif" alt="2 Second Rule">
       <div class="caption">Coming from a third-world upbringing, transitioning to life in New York City has exposed the jarring contrast between its global prestige and the staggering daily waste that surrounds it.</div>
     </div>
-    <div style="width: 20%; max-height: 600px;"  class="media-item">
+    <div class="media-item media-small">
       <img src="Images/TRESIPHOTOMOTION.gif" alt="Mixed Media">
       <div class="caption">A TRESI Experimental video using mixed media. One of the first videos I produced for them.</div>
     </div>
