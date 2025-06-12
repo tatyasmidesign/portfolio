@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>tati yasmi design</title>
   <style>
+@font-face {
+  font-family: 'PP Editorial';
+  src: url('fonts/PPEditorialNew-UltralightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
     body {
       font-family: 'Courier New', Courier, monospace;
       background-color: white;
@@ -12,34 +19,42 @@
       padding: 0;
       color: #111;
     }
-    html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* avoids horizontal scroll if needed */
-}
-    .intro {
-  margin: 1rem;
-  padding: 1rem;
-  font-size: 1.3rem;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 1rem;
-  width: 100vw; 
-  margin: 0;
-  padding: 0;
-  margin-bottom: 100px;
-}
 
-.media-item {
-  position: relative;
-  width: calc(25% - 1rem); 
-  overflow: hidden;
-  flex-shrink: 0;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .intro {
+      margin: 1rem;
+      padding: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .name, .design-types {
+      font-family: 'PP Editorial', serif;
+      letter-spacing: 0.05em;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 1rem;
+      width: 100vw; 
+      margin: 0;
+      padding: 0;
+      margin-bottom: 100px;
+    }
+
+    .media-item {
+      position: relative;
+      width: calc(25% - 1rem); 
+      overflow: hidden;
+      flex-shrink: 0;
+    }
 
     .media-item img {
       max-height: 100%;
@@ -51,22 +66,43 @@
     }
 
     .caption {
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.95);
-  color: rgb(143, 143, 143);
-  font-size: 0.9rem;
-  padding: 1rem;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: rgb(143, 143, 143);
+      font-size: 0.9rem;
+      padding: 1rem;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transition: max-height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .media-item:hover .caption {
+      max-height: 300px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .button-link {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  color: #000;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+  padding: 6px;
 }
 
-.media-item:hover .caption {
-  max-height: 300px; /* or however tall your longest caption is */
-  opacity: 1;
-  visibility: visible;
+.button-link:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px;
 }
 
     footer {
@@ -85,84 +121,99 @@
       padding: 0.5rem 1rem;
       border-radius: 5px;
       transition: background-color 0.3s, color 0.3s;
+      padding: 5px;
     }
 
     .footer-links a:hover {
-      background-color: #111;
-      color: white;
+      background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px;
     }
+    .name, .design-types {
+  font-family: 'PP Editorial', serif;
+  font-weight: 200;
+  font-style: italic;
+}
 
+    @media (max-width: 768px) {
+      body, html {
+        background-color: #000;
+        color: #fff;
+      }
 
-@media (max-width: 768px) {
-  body, html {
-    background-color: #000;
-    color: #fff;
-  }
+      .intro {
+        color: #fff;
+      }
 
-  .intro {
-    color: #fff;
-  }
-  .row {
+      .row {
         flex-direction: column;
         align-items: flex-start;
       }
+
       .media-item {
         max-width: 100%;
+        width: 100%;
       }
-      @media (max-width: 768px) {
-  .media-item {
-    width: 100%;
-  }
-}
-.media-small {
-  width: calc(20% - 1rem);
-}
-footer {
-    background-color: #000;
-    color: #fff;
-  }
 
-  .footer-links a {
-    color: #fff;
+      .media-small {
+        width: calc(20% - 1rem);
+      }
+
+      footer {
+        background-color: #000;
+        color: #fff;
+      }
+
+      .footer-links a {
+        color: #fff;
+        border-color: #fff;
+      }
+
+      .footer-links a:hover {
+        background-color: #fff;
+        color: #000;
+      }
+      .button-link {
     border-color: #fff;
+    color: #fff;
+    background-color: transparent;
   }
 
-  .footer-links a:hover {
+  .button-link:hover {
     background-color: #fff;
     color: #000;
+    border-radius: 30px;
   }
 
-  .media-item {
-    width: 100%;
-  }
+      .caption {
+        max-height: none;
+        opacity: 1;
+        visibility: visible;
+        background-color: #000;
+        color: #fff;
+        position: relative;
+      }
 
-  .caption {
-    max-height: none;
-    opacity: 1;
-    visibility: visible;
-    background-color: #000;
-    color: #fff;
-    position: relative;
-  }
-
-  .media-item:hover .caption {
-    /* Prevent hover from changing anything on mobile */
-    max-height: none;
-    opacity: 1;
-    visibility: visible;
-  }
-}
+      .media-item:hover .caption {
+        max-height: none;
+        opacity: 1;
+        visibility: visible;
+      }
     }
   </style>
 </head>
 <body>
   <div class="intro">
     <p>
-      Hi, I’m Tatiana Yasmine Adriano Boccone (aka Tati / Yasmi) — a Filipino-American creative with over 7 years of experience translating ideas into design through video editing, campaign execution, and content design. I’m passionate about motion design and love crafting compelling brand narratives using tools like Adobe Creative Suite, Figma <3, and Final Cut Pro.
+      Hi, I’m <span class="name">Tatiana Yasmine Adriano Boccone</span> (aka Tati / Yasmi) — Born + raised in Manila, now living in MAnhattan. 7+ years of experience translating abstract ideas into engaging designs that can be understood by all — regardless of language or culture.
     </p>
-  </div>
+    
+    <p>
+      I work across a range of design disciplines including <span class="design-types">motion, print,</span> & <span class="design-types">content design</span>. I began as a fine artist and went on to earn a BFA in Communication Design from <span class="design-types">Parsons School of Design.</span> I'm passionate about motion design and love shaping compelling brand stories using tools like Adobe Creative Suite, Figma <3 (aka love of my life), and Final Cut Pro. <a href="Images/TATIANA RESUME.pdf" target="_blank" class="button-link"> RESUME (PDF)</a>
+    </p>
+  </div>  
 
-  <!-- First Row -->
   <div class="row">
     <div class="media-item">
       <img src="Images/TRESI LANDING PAGE.gif" alt="Landing Page">
@@ -227,6 +278,7 @@ footer {
   </footer>
 </body>
 </html>
+
 
 
 
