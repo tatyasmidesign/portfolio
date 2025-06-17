@@ -206,7 +206,7 @@
 <body>
   <div class="intro">
     <p>
-      Hi, I’m <span class="name">Tatiana Yasmine Adriano Boccone</span> (aka Tati / Yasmi) — Born + raised in Manila, now living in MAnhattan. 7+ years of experience translating abstract ideas into engaging designs that can be understood by all — regardless of language or culture.
+      Hi, I’m <span class="name">Tatiana Yasmine Adriano Boccone</span> (aka Tati / Yasmi) — Born + raised in Manila, now living in Manhattan. 7+ years of experience translating abstract ideas into engaging designs that can be understood by all — regardless of language or culture.
     </p>
     
     <p>
@@ -228,23 +228,23 @@
       <div class="caption">Freelance book design work for designer Carolina Sarria for her CFDA entry.</div>
     </div>
     <div class="media-item">
-      <img src="Images/DOC+JOURNALISM.gif" alt="Journalism">
-      <div class="caption">This project was an experiment—a visually bold documentary that breaks away from the usual dull stereotypes. It explores how different documentaries are used to inform audiences and serve journalistic purposes. By using vibrant colors and large text, it brings energy and clarity to the way important information is shared.</div>
+      <img src="Images/PILIPINAS BOOK.png" alt="2 Second Rule">
+      <div class="caption">PILIPINAS BOOK A print experiment exploring print on colored paper and handmade techniques—my first time using the Japanese stab binding method.</div>
     </div>
   </div>
 
   <div class="row">
     <div class="media-item">
+      <img src="Images/met1v.gif" alt="Stop Motion">
+      <div class="caption">THE MET BOOK:  Made from collected maps and tickets, the MET map & ticket book serves as a visual archive of repeated visits, capturing a quiet history of art, memory, and place.</div>
+    </div>
+    <div class="media-item">
       <img src="Images/BRAVEHEART.png" alt="Print Exploration">
       <div class="caption">Explorations in print and form for “MY SELF PORTRAIT”.</div>
     </div>
-    <div class="media-item">
-      <img src="Images/PLACES.gif" alt="Mixed Media">
+    <div class="media-item media-small">
+      <img src="Images/TRESIPHOTOMOTION.gif" alt="Mixed Media">
       <div class="caption">A TRESI Experimental video using mixed media. One of the first videos I produced for them.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/FORMAT.jpg" alt="Format">
-      <div class="caption">Explorations in print and form for “MY SELF PORTRAIT”.</div>
     </div>
     <div class="media-item">
       <img src="Images/PERLASNGSILANGAN.gif" alt="Pearl of the Orient">
@@ -254,19 +254,45 @@
 
   <div class="row">
     <div class="media-item">
-      <img src="Images/PILIPINAS BOOK.png" alt="2 Second Rule">
-      <div class="caption">PILIPINAS BOOK A print experiment exploring print on colored paper and handmade techniques—my first time using the Japanese stab binding method.</div>
-    </div>
-    <div class="media-item media-small">
-      <img src="Images/TRESIPHOTOMOTION.gif" alt="Mixed Media">
-      <div class="caption">A TRESI Experimental video using mixed media. One of the first videos I produced for them.</div>
-    </div>
-    <div class="media-item">
       <img src="Images/STOPMOTION.gif" alt="Stop Motion">
       <div class="caption">From flipbook to motion, this exploration is an extension of my college thesis: a self portrait.</div>
     </div>
+    <div class="media-item">
+      <img src="Images/DOC+JOURNALISM.gif" alt="Journalism">
+      <div class="caption">This project was an experiment—a visually bold documentary that breaks away from the usual dull stereotypes. It explores how different documentaries are used to inform audiences and serve journalistic purposes. By using vibrant colors and large text, it brings energy and clarity to the way important information is shared.</div>
+    </div>
   </div>
-
+  <div style="text-align: center; margin-bottom: 4rem;">
+    <a href="#" id="more-btn" class="button-link">MORE</a>
+  </div>
+  
+  
+  <div id="more-work" class="row" style="display: none;">
+    <div class="media-item">
+      <img src="Images/SELF PORTRAIT.jpg" alt="My Self Portrait">
+      <div class="caption">Caption for Extra Work 1.</div>
+    </div>
+    <div class="media-item">
+      <img src="Images/identity wounds.png" alt="Identity Wounds">
+      <div class="caption">Caption for Extra Work 2.</div>
+    </div>
+    <div class="media-item">
+      <img src="Images/rawart1.JPG" alt="My Self Portrait">
+      <div class="caption">Caption for Extra Work 1.</div>
+    </div>
+    <div class="media-item">
+      <img src="Images/GRAPHITE STUDY.png" alt="Identity Wounds">
+      <div class="caption">Caption for Extra Work 2.</div>
+    </div>
+    <div class="media-item">
+      <img src="Images/lololola.png" alt="Identity Wounds">
+      <div class="caption">Caption for Extra Work 2.</div>
+    </div>
+    <div class="media-item">
+      <img src="Images/rawart5.JPG" alt="Identity Wounds">
+      <div class="caption">Caption for Extra Work 2.</div>
+    </div>
+  </div>
   <footer>
     <p>Based in NYC</p>
     <div class="footer-links">
@@ -276,8 +302,22 @@
       <a href="https://www.instagram.com/xaxixasmi" target="_blank">Instagram</a>
     </div>
   </footer>
+  <script>
+    document.getElementById("more-btn").addEventListener("click", function (e) {
+      e.preventDefault(); 
+      const moreWork = document.getElementById("more-work");
+      if (moreWork.style.display === "none") {
+        moreWork.style.display = "flex";
+        this.textContent = "LESS";
+      } else {
+        moreWork.style.display = "none";
+        this.textContent = "MY ART";
+      }
+    });
+  </script>
 </body>
 </html>
+
 
 
 
