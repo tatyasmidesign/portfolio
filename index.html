@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tati yasmi design</title>
   <style>
-@font-face {
-  font-family: 'PP Editorial';
-  src: url('fonts/PPEditorialNew-UltralightItalic.otf') format('opentype');
-  font-weight: 200;
-  font-style: italic;
-}
+    @font-face {
+      font-family: 'PP Editorial';
+      src: url('fonts/PPEditorialNew-UltralightItalic.otf') format('opentype');
+      font-weight: 200;
+      font-style: italic;
+    }
 
     body {
       font-family: 'Courier New', Courier, monospace;
@@ -21,8 +21,6 @@
     }
 
     html, body {
-      margin: 0;
-      padding: 0;
       overflow-x: hidden;
     }
 
@@ -35,6 +33,8 @@
     .name, .design-types {
       font-family: 'PP Editorial', serif;
       letter-spacing: 0.05em;
+      font-weight: 200;
+      font-style: italic;
     }
 
     .row {
@@ -43,7 +43,7 @@
       justify-content: center;
       align-items: flex-end;
       gap: 1rem;
-      width: 100vw; 
+      width: 100vw;
       margin: 0;
       padding: 0;
       margin-bottom: 100px;
@@ -51,9 +51,10 @@
 
     .media-item {
       position: relative;
-      width: calc(25% - 1rem); 
+      width: calc(25% - 1rem);
       overflow: hidden;
       flex-shrink: 0;
+      margin-bottom: 100px;
     }
 
     .media-item img {
@@ -85,25 +86,23 @@
     }
 
     .button-link {
-  display: inline-block;
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  border: 1px solid #000;
-  color: #000;
-  background-color: #fff;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
-  padding: 6px;
-}
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      border: 1px solid #000;
+      color: #000;
+      background-color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+    }
 
-.button-link:hover {
-  background-color: #000;
-  color: #fff;
-  border-radius: 20px;
-  padding: 5px;
-}
+    .button-link:hover {
+      background-color: #000;
+      color: #fff;
+      border-radius: 20px;
+    }
 
     footer {
       background-color: white;
@@ -121,20 +120,68 @@
       padding: 0.5rem 1rem;
       border-radius: 5px;
       transition: background-color 0.3s, color 0.3s;
-      padding: 5px;
     }
 
     .footer-links a:hover {
       background-color: #000;
-  color: #fff;
-  border-radius: 20px;
-  padding: 5px;
+      color: #fff;
+      border-radius: 20px;
     }
-    .name, .design-types {
-  font-family: 'PP Editorial', serif;
-  font-weight: 200;
-  font-style: italic;
+#more-work {
+  display: none;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 100vw;
+  scroll-snap-type: x mandatory;
 }
+
+#more-work .media-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 150px;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+#more-work .media-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#more-work .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 6px 6px;
+}
+
+#more-work .media-item:hover .caption {
+  opacity: 1;
+}
+.media-item.small {
+  width: 350px;
+}
+
+.media-item.medium {
+  width: 450px;
+}
+
+.media-item.large {
+  width: 550px;
+}
+
 
     @media (max-width: 768px) {
       body, html {
@@ -152,19 +199,14 @@
       }
 
       .media-item {
-        max-width: 100%;
         width: 100%;
       }
-      
-      .media-item img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  max-height: 80vh;
-}
 
-      .media-small {
-        width: calc(110% - 1rem);
+      .media-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-height: 80vh;
       }
 
       footer {
@@ -181,17 +223,18 @@
         background-color: #fff;
         color: #000;
       }
-      .button-link {
-    border-color: #fff;
-    color: #fff;
-    background-color: transparent;
-  }
 
-  .button-link:hover {
-    background-color: #fff;
-    color: #000;
-    border-radius: 30px;
-  }
+      .button-link {
+        border-color: #fff;
+        color: #fff;
+        background-color: transparent;
+      }
+
+      .button-link:hover {
+        background-color: #fff;
+        color: #000;
+        border-radius: 30px;
+      }
 
       .caption {
         max-height: none;
@@ -199,7 +242,6 @@
         visibility: visible;
         background-color: #000;
         color: #fff;
-        position: relative;
       }
 
       .media-item:hover .caption {
@@ -207,99 +249,145 @@
         opacity: 1;
         visibility: visible;
       }
+      @media (max-width: 768px) {
+  .media-item.small,
+  .media-item.medium,
+  .media-item.large {
+    width: 100% !important;
+  }
+}
     }
   </style>
 </head>
 <body>
   <div class="intro">
-    <p>
-      Hi, I’m <span class="name">Tatiana Yasmine Adriano Boccone</span> (aka Tati / Yasmi) — 7+ years of experience translating abstract ideas into engaging designs that can be understood by all — regardless of language or culture.
-    </p>
-    
-    <p>
-      I work across a range of design disciplines including <span class="design-types">motion, print,</span> & <span class="design-types">content design</span>. I began as a fine artist and went on to earn a BFA in Communication Design from <span class="design-types">Parsons School of Design.</span> I'm passionate about motion design and love shaping compelling brand stories using tools like Adobe Creative Suite, Figma <3 (aka love of my life), and Final Cut Pro. <a href="Images/TATIANA RESUME.pdf" target="_blank" class="button-link"> RESUME (PDF)</a>
-    </p>
-  </div>  
+    <p>Hi, I’m <span class="name">Tatiana Yasmine Adriano Boccone</span> (aka Tati / Yasmi) — 7+ years of experience translating abstract ideas into engaging designs that can be understood by all — regardless of language or culture.</p>
+    <p>I work across a range of design disciplines including <span class="design-types">motion, print,</span> & <span class="design-types">content design</span>. I began as a fine artist and earned a BFA in Communication Design from <span class="design-types">Parsons School of Design.</span> I'm passionate about motion design and love shaping compelling brand stories using Adobe Creative Suite, Figma, and Final Cut Pro. <a href="Images/TATIANA RESUME.pdf" target="_blank" class="button-link">RESUME (PDF)</a></p>
+  </div>
 
   <div class="row">
-    <div class="media-item">
-      <img src="Images/TRESI LANDING PAGE.gif" alt="Landing Page">
+    <div class="media-item small">
+      <a href="Images/TICKETSMOSAIC.png" target="_blank">
+        <img src="Images/TICKETSMOSAIC.png" alt="Mosaic">
+      </a>
+      <div class="caption">“Beyond the Cover” is a visual self-portrait in book form, tracing my journey as a half-Filipino, half-American navigating cultural displacement and identity.</div>
+    </div>
+        <div class="media-item large">
+      <a href="Images/TRESI LANDING PAGE.gif" target="_blank">
+        <img src="Images/TRESI LANDING PAGE.gif" alt="Landing Page">
+      </a>
       <div class="caption">As Marketing Manager at TRESI, I filmed, edited, and produced the entry video featured on the company’s website.</div>
     </div>
-    <div class="media-item">
-      <img src="Images/TICKETSMOSAIC.png" alt="Mosaic">
-      <div class="caption">Visualising data and memory (archive) without language is a theme I explored during my Thesis earning my BFA in Parsons School of Design.“Beyond the Cover” is a visual self-portrait in book form, tracing my journey as a half-Filipino, half-American navigating cultural displacement and identity. Through fragmented portraits, landscapes, and still lifes, the work reflects my evolution from a state of unbelonging to a loving acceptance of self. </div>
+    <div class="media-item small">
+      <a href="Images/PILIPINAS BOOK.png" target="_blank">
+        <img src="Images/PILIPINAS BOOK.png" alt="PILIPINAS BOOK">
+      </a>
+      <div class="caption">A print experiment exploring handmade techniques and colored paper—my first time using the Japanese stab binding method.</div>
     </div>
-    <div class="media-item">
-      <img src="Images/CSBOOK.gif" alt="CS Book">
+        <div class="media-item medium">
+      <a href="Images/CSBOOK.gif" target="_blank">
+        <img src="Images/CSBOOK.gif" alt="CS Book">
+      </a>
       <div class="caption">Freelance digital book design work for designer Carolina Sarria for her CFDA entry, showcasing her fashion brand and past works.</div>
     </div>
-    <div class="media-item">
-      <img src="Images/PILIPINAS BOOK.png" alt="2 Second Rule">
-      <div class="caption">PILIPINAS BOOK A print experiment exploring print on colored paper and handmade techniques—my first time using the Japanese stab binding method.</div>
+    <div class="media-item medium">
+      <a href="Images/TRESI STUDIO ZINE.png" target="_blank">
+        <img src="Images/TRESI STUDIO ZINE.png" alt="Braveheart Screenplay">
+      </a>
+      <div class="caption">So proud of being able to refurbish furniture as part of the TRESI Studio team. I made this little zine to showcase our projects.
+
+      </div>
     </div>
+        <div class="media-item large">
+      <a href="Images/met1v.gif" target="_blank">
+        <img src="Images/met1v.gif" alt="MET Book">
+      </a>
+      <div class="caption">THE MET BOOK: A visual archive of repeated visits using maps and tickets collected at the MET Museum.</div>
+    </div>
+    <div class="media-item small">
+      <a href="Images/TRESIPHOTOMOTION.gif" target="_blank">
+        <img src="Images/TRESIPHOTOMOTION.gif" alt="Mixed Media">
+      </a>
+      <div class="caption">An experimental video for TRESI using mixed media. One of the first videos I produced for them.</div>
+    </div>
+        <div class="media-item small">
+      <a href="Images/STOPMOTION.gif" target="_blank">
+        <img src="Images/STOPMOTION.gif" alt="Stop Motion">
+      </a>
+      <div class="caption">A stop motion piece created as part of my thesis, exploring identity and self through traditional animation.</div>
+    </div>
+    <div class="media-item large">
+      <a href="Images/PERLASNGSILANGAN.gif" target="_blank">
+        <img src="Images/PERLASNGSILANGAN.gif" alt="Pearl of the Orient">
+      </a>
+      <div class="caption">This mini-documentary explores the Philippines’ fall from “Pearl of the Orient” to a major waste offender.</div>
+    </div>
+    <div class="media-item large">
+      <a href="Images/CHAVACANO BOOK!.gif" target="_blank">
+        <img src="Images/CHAVACANO BOOK!.gif" alt="Chavacano Book">
+      </a>
+      <div class="caption">A creative take on the dying Chavacano dialect through experimental book design.</div>
+    </div>
+
   </div>
 
-  <div class="row">
-    <div class="media-item">
-      <img src="Images/met1v.gif" alt="Stop Motion">
-      <div class="caption">THE MET BOOK:  Made from collected maps and tickets, the MET map & ticket book serves as a visual archive of repeated visits, capturing a quiet history of art, memory, and place.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/BRAVEHEART.png" alt="Print Exploration">
-      <div class="caption">BRAVEHEART SCREENPLAY: Translating an entire screenplay into a book. After seeing books of screenplays being sold on the side of the road in Soho, I challenged myself to make my own with certain design choices, and gift it to my dad.</div>
-    </div>
-    <div class="media-item media-small">
-      <img src="Images/TRESIPHOTOMOTION.gif" alt="Mixed Media">
-      <div class="caption">A experimental video for TRESI using mixed media. One of the first videos I produced for them.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/PERLASNGSILANGAN.gif" alt="Pearl of the Orient">
-      <div class="caption">THE PEARL OF THE ORIENT: This mini-documentary explores the Philippines’ fall from the “Pearl of the Orient” to one of the world’s worst waste offenders, uncovering how history, war, and exploitation shaped its environmental crisis.</div>
-    </div>
-  </div>
+<div style="text-align: center; margin-bottom: 2rem;">
+  <a href="#" id="more-btn" class="button-link">MORE</a>
+</div>
 
-  <div class="row">
-    <div class="media-item">
-      <img src="Images/STOPMOTION.gif" alt="Stop Motion">
-      <div class="caption">From flipbook to motion, this exploration is an extension of my college thesis: a self portrait. Utilizing traditional stopmotion techniques, I produced this video as well as a flipbook as a book/art piece focused on identity and self.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/DOC+JOURNALISM.gif" alt="Journalism">
-      <div class="caption">This project was an experiment—a visually bold documentary that breaks away from the usual dull stereotypes. It explores how different documentaries are used to inform audiences and serve journalistic purposes. By using vibrant colors and large text, it brings energy and clarity to the way important information is shared.</div>
-    </div>
+<div id="more-work" class="row">
+   <p style="text-align: center; margin-bottom: 2rem;">Before I designed, I painted...</p>
+  <div class="media-item">
+    <a href="Images/SELF PORTRAIT.jpg" target="_blank">
+      <img src="Images/SELF PORTRAIT.jpg" alt="My Self Portrait" />
+      <div class="caption">My Self Portrait</div>
+    </a>
   </div>
-  <div style="text-align: center; margin-bottom: 4rem;">
-    <a href="#" id="more-btn" class="button-link">MORE</a>
+  <div class="media-item">
+    <a href="Images/identity wounds.png" target="_blank">
+      <img src="Images/identity wounds.png" alt="Identity Wounds" />
+      <div class="caption">Identity Wounds</div>
+    </a>
   </div>
-  
-  
-  <div id="more-work" class="row" style="display: none;">
-    <div class="media-item">
-      <img src="Images/SELF PORTRAIT.jpg" alt="My Self Portrait">
-      <div class="caption">Caption for Extra Work 1.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/identity wounds.png" alt="Identity Wounds">
-      <div class="caption">Caption for Extra Work 2.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/rawart1.JPG" alt="My Self Portrait">
-      <div class="caption">Caption for Extra Work 1.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/GRAPHITE STUDY.png" alt="Identity Wounds">
-      <div class="caption">Caption for Extra Work 2.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/lololola.png" alt="Identity Wounds">
-      <div class="caption">Caption for Extra Work 2.</div>
-    </div>
-    <div class="media-item">
-      <img src="Images/rawart5.JPG" alt="Identity Wounds">
-      <div class="caption">Caption for Extra Work 2.</div>
-    </div>
+  <div class="media-item">
+    <a href="Images/rawart1.JPG" target="_blank">
+      <img src="Images/rawart1.JPG" alt="Raw Art 1" />
+      <div class="caption">Raw Art 1</div>
+    </a>
   </div>
+  <div class="media-item">
+    <a href="Images/GRAPHITE STUDY.png" target="_blank">
+      <img src="Images/GRAPHITE STUDY.png" alt="Graphite Study" />
+      <div class="caption">Graphite Study</div>
+    </a>
+  </div>
+  <div class="media-item">
+    <a href="Images/lololola.png" target="_blank">
+      <img src="Images/lololola.png" alt="Lola" />
+      <div class="caption">Lola</div>
+    </a>
+  </div>
+  <div class="media-item">
+    <a href="Images/rawart5.JPG" target="_blank">
+      <img src="Images/rawart5.JPG" alt="Raw Art 5" />
+      <div class="caption">Raw Art 5</div>
+    </a>
+  </div>
+</div>
+
+
+
+
+<script>
+  document.getElementById("more-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    const moreWork = document.getElementById("more-work");
+    const isHidden = moreWork.style.display === "none";
+    moreWork.style.display = isHidden ? "flex" : "none";
+    this.textContent = isHidden ? "LESS" : "MORE";
+  });
+</script>
+
   <footer>
     <p>Based in NYC</p>
     <div class="footer-links">
@@ -309,21 +397,9 @@
       <a href="https://www.instagram.com/xaxixasmi" target="_blank">Instagram</a>
     </div>
   </footer>
-  <script>
-    document.getElementById("more-btn").addEventListener("click", function (e) {
-      e.preventDefault(); 
-      const moreWork = document.getElementById("more-work");
-      if (moreWork.style.display === "none") {
-        moreWork.style.display = "flex";
-        this.textContent = "LESS";
-      } else {
-        moreWork.style.display = "none";
-        this.textContent = "MY ART";
-      }
-    });
-  </script>
 </body>
 </html>
+
 
 
 
